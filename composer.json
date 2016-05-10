@@ -1,0 +1,16 @@
+{
+    "name": "cedricziel/simplebase-news",
+    "type": "typo3-cms-extension",
+    "description" : "Simplebase News Extension",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "CedricZiel\\SimplebaseNews\\": "Classes"
+        }
+    },
+    "require": {
+        "symfony/config": "^3.0",
+        "symfony/dependency-injection": "^3.0",
+        "symfony/yaml": "^3.0"
+    }
+}
