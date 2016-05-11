@@ -4,9 +4,15 @@
  * Configures a simple plugin
  */
 \CedricZiel\Simplebase\Framework\Utility\ExtensionUtility::configurePlugin(
-    'CedricZiel.'. $_EXTKEY,
+    'CedricZiel.'.$_EXTKEY,
     'simplebase_news',
-    ['News' => 'index'],
+    [
+        'news_index' => [
+            'path'        => 'index',
+            '_controller' => 'SimplebaseNewsBundle:News:index',
+
+        ],
+    ],
     [],
     \CedricZiel\Simplebase\Framework\Utility\ExtensionUtility::PLUGIN_TYPE_PLUGIN,
     [
