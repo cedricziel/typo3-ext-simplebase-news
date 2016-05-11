@@ -8,7 +8,7 @@
     'simplebase_news',
     [
         'news_index' => [
-            'path'        => 'index',
+            'path' => 'index',
             '_controller' => 'SimplebaseNewsBundle:News:index',
 
         ],
@@ -16,6 +16,6 @@
     [],
     \CedricZiel\Simplebase\Framework\Utility\ExtensionUtility::PLUGIN_TYPE_PLUGIN,
     [
-        CedricZiel\SimplebaseNews\SimplebaseNewsExtension::class,
+        CedricZiel\SimplebaseNews\SimplebaseNewsBundle::class,
     ]
 );

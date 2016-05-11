@@ -1,10 +1,13 @@
 <?php
 
-namespace CedricZiel\SimplebaseNews;
+namespace CedricZiel\SimplebaseNews\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 
+/**
+ * @package CedricZiel\SimplebaseNews\DependencyInjection
+ */
 class SimplebaseNewsExtension extends Extension
 {
     /**
