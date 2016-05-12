@@ -12,4 +12,25 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class News extends AbstractEntity
 {
+    /**
+     * @ORM\Column("header")
+     * @var string
+     */
+    protected $header;
+
+    /**
+     * @return string
+     */
+    public function getHeader()
+    {
+        return $this->header;
+    }
+
+    /**
+     * @param string $header
+     */
+    public function setHeader($header)
+    {
+        $this->header = $header;
+    }
 }

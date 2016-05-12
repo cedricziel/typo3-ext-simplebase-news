@@ -1,0 +1,15 @@
+{% extends '@SimplebaseNews/layout.html.twig' %}
+
+{% block main %}
+    {% if news|length > 0 %}
+        <ul class="list-unstyled">
+            {% for news_article in news %}
+                <li>
+                    <a href="?tx_simplebasenews_simplebasenews[controller]=SimplebaseNewsBundle:News:show&tx_simplebasenews_simplebasenews[news]={{ news_article.uid }}">
+                        {{ news_article.header }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

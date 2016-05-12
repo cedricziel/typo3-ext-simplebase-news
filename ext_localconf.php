@@ -7,7 +7,8 @@
     'CedricZiel.'.$_EXTKEY,
     'simplebase_news',
     [
-        'news_index' => [
+        [
+            'name' => 'news_index',
             'path' => 'index',
             '_controller' => 'SimplebaseNewsBundle:News:index',
 
