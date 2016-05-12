@@ -1,0 +1,18 @@
+{% extends '@SimplebaseNews/layout.html.twig' %}
+
+{% block main %}
+    <h2>News: Show</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ news.header }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

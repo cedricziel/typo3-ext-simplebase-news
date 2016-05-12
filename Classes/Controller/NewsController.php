@@ -51,7 +51,7 @@ class NewsController extends AbstractController
 
         $news = $repository->find($news);
 
-        return new Response($this->render('@SimplebaseNews/News/index.html.twig', [
+        return new Response($this->render('@SimplebaseNews/News/show.html.twig', [
             'news' => $news,
         ]));
     }
