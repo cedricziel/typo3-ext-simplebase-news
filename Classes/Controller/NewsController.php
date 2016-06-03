@@ -4,6 +4,7 @@ namespace CedricZiel\SimplebaseNews\Controller;
 
 use CedricZiel\Simplebase\Framework\Controller\AbstractController;
 use CedricZiel\SimplebaseNews\Entity\News;
+use CedricZiel\SimplebaseNews\Form\NewsType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -53,6 +54,22 @@ class NewsController extends AbstractController
 
         return new Response($this->render('@SimplebaseNews/News/show.html.twig', [
             'news' => $news,
+        ]));
+    }
+
+    /**
+     * Shows a form and persists the entity
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function newAction(Request $request)
+    {
+        $form = $this->createForm(NewsType::class);
+
+        return new Response($this->render('@SimplebaseNews/News/new.html.twig', [
+            'form' => $form->createView(),
         ]));
     }
 }
